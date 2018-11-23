@@ -56,6 +56,8 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                //.antMatchers("/api/user").hasRole("admin")   //匹配器对路径进行权限匹配
+
                 .anyRequest().authenticated()  //任何请求都需要先认证
                 .and().formLogin()
                 .loginProcessingUrl("/api/login")  //登录URL
@@ -65,8 +67,6 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter{
                 .and().logout().clearAuthentication(true).deleteCookies("") //登录之后清除认证信息和Cookie
                 .and().exceptionHandling().authenticationEntryPoint(new AuthUnLoginHandler())   //登录失效或未认证处理
                 .and().csrf().disable();  //关闭跨域请求伪造
-
-        // .httpBasic().authenticationEntryPoint(new AuthUnLoginHandler());   //未登录处理
 
         http.exceptionHandling().accessDeniedHandler(new AuthUnAuthorityHandler());  //权限不够处理(否则返回html页面)
     }
