@@ -1,6 +1,6 @@
 package com.alien.basicTemplate.service.user.impl;
 
-import com.alien.basicTemplate.entity.User;
+import com.alien.basicTemplate.entity.SysUser;
 import com.alien.basicTemplate.service.user.IUserService;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
@@ -19,8 +19,8 @@ public class UserServiceImpl implements IUserService {
     Dao dao;
 
     @Override
-    public User findUserByUsername(String username) {
-        User user =dao.fetchLinks(dao.fetch(User.class, Cnd.where("username","=",username)),"authorities");
+    public SysUser findUserByUsername(String username) {
+        SysUser user =dao.fetchLinks(dao.fetch(SysUser.class, Cnd.where("username","=",username)),"authorities");
         if (user==null){
             throw new UsernameNotFoundException("用户名不存在");
         }

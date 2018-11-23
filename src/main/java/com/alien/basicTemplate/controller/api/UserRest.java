@@ -1,8 +1,6 @@
 package com.alien.basicTemplate.controller.api;
 
 import com.alien.basicTemplate.controller.AbstractController;
-import com.alien.basicTemplate.dto.AjaxResult;
-import com.alien.basicTemplate.entity.User;
 import com.alien.basicTemplate.utils.UserUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;

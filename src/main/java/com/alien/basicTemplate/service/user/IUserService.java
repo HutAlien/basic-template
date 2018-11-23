@@ -1,6 +1,6 @@
 package com.alien.basicTemplate.service.user;
 
-import com.alien.basicTemplate.entity.User;
+import com.alien.basicTemplate.entity.SysUser;
 
 /**
  * @Auther: FengYunJun
@@ -8,5 +8,5 @@ import com.alien.basicTemplate.entity.User;
  * @Description:
  */
 public interface IUserService {
-    User findUserByUsername(String username);
+    SysUser findUserByUsername(String username);
 }

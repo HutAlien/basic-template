@@ -1,7 +1,7 @@
 package com.alien.basicTemplate.utils;
 
 import com.alien.basicTemplate.dto.AjaxCode;
-import com.alien.basicTemplate.entity.User;
+import com.alien.basicTemplate.entity.SysUser;
 import com.alien.basicTemplate.exception.CustomException;
 import org.springframework.security.core.context.SecurityContextHolder;
 
@@ -17,11 +17,11 @@ public class UserUtils {
      * @param
      * @return
      */
-    public static User getConCurrentUser() {
-        if (getAuthentication() == null || getAuthentication().isAuthenticated()) {
+    public static SysUser getConCurrentUser() {
+        if (getAuthentication() == null || !getAuthentication().isAuthenticated()) {
             throw new CustomException(AjaxCode.LOGIN_INVALID_MESSAGE);
         }
-        return (User) getAuthentication().getPrincipal();
+        return (SysUser) getAuthentication().getPrincipal();
     }
 
     /**
