@@ -1,4 +1,4 @@
-package com.alien.basicTemplate.dto;
+package com.alien.basicTemplate.model.dto;
 
 /**
  * @Auther: FengYunJun

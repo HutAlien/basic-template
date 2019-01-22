@@ -1,7 +1,7 @@
 package com.alien.basicTemplate.configure.auth;
 
-import com.alien.basicTemplate.dto.AjaxCode;
-import com.alien.basicTemplate.dto.AjaxResult;
+import com.alien.basicTemplate.model.dto.AjaxCode;
+import com.alien.basicTemplate.model.dto.AjaxResult;
 import org.nutz.json.Json;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

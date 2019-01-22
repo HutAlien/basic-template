@@ -57,7 +57,6 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 //.antMatchers("/api/user").hasRole("admin")   //匹配器对路径进行权限匹配
-
                 .anyRequest().authenticated()  //任何请求都需要先认证
                 .and().formLogin()
                 .loginProcessingUrl("/api/login")  //登录URL

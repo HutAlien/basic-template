@@ -1,7 +1,7 @@
 package com.alien.basicTemplate.exception;
 
-import com.alien.basicTemplate.dto.AjaxCode;
-import com.alien.basicTemplate.dto.AjaxResult;
+import com.alien.basicTemplate.model.dto.AjaxCode;
+import com.alien.basicTemplate.model.dto.AjaxResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
