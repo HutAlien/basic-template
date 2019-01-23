@@ -1,7 +1,7 @@
 package com.alien.basicTemplate.configure.auth;
 
-import com.alien.basicTemplate.dto.AjaxCode;
-import com.alien.basicTemplate.dto.AjaxResult;
+import com.alien.basicTemplate.model.dto.AjaxCode;
+import com.alien.basicTemplate.model.dto.AjaxResult;
 import org.nutz.json.Json;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
@@ -16,7 +16,7 @@ import java.io.IOException;
  * @Date: 2018/11/23 14:24
  * @Description: 无权访问处理
  */
-public class AuthUnAuthorityHandler implements AccessDeniedHandler{
+public class AuthUnAuthorityHandler implements AccessDeniedHandler {
 
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {

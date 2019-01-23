@@ -1,6 +1,6 @@
 package com.alien.basicTemplate.utils;
 
-import com.alien.basicTemplate.dto.AjaxCode;
+import com.alien.basicTemplate.model.dto.AjaxCode;
 import com.alien.basicTemplate.entity.SysUser;
 import com.alien.basicTemplate.exception.CustomException;
 import org.springframework.security.core.context.SecurityContextHolder;

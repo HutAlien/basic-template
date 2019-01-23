@@ -1,7 +1,7 @@
 package com.alien.basicTemplate.configure.auth;
 
-import com.alien.basicTemplate.dto.AjaxCode;
-import com.alien.basicTemplate.dto.AjaxResult;
+import com.alien.basicTemplate.model.dto.AjaxCode;
+import com.alien.basicTemplate.model.dto.AjaxResult;
 import com.alien.basicTemplate.utils.UserUtils;
 import org.nutz.json.Json;
 import org.slf4j.Logger;
@@ -26,7 +26,6 @@ public class AuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-       // super.onAuthenticationSuccess(request, response, authentication);
         logger.info("登录成功");
         response.setContentType("application/json;charset=UTF-8");
         response.getWriter().write(Json.toJson(new AjaxResult(AjaxCode.SUCCESS, AjaxCode.SUCCESS_MESSAGE, UserUtils.getConCurrentUser())));

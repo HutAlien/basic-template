@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class UserRest extends AbstractController {
 
-    @PostMapping("/login")
-    public void login() {
-    }
-
     @GetMapping("/user")
     @PreAuthorize("hasAuthority('admin')")   //若权限点字符串为"ROLE_ADMIN" 则hasAuthority('ROLE_ADMIN')或hasRole('ADMIN')
     public boolean IsAuthenticated() {
